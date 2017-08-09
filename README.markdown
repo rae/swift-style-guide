@@ -328,10 +328,10 @@ class Circle: Shape {
   var radius: Double
   var diameter: Double {
     get {
-      return radius * 2
+      return self.radius * 2
     }
     set {
-      radius = newValue / 2
+      self.radius = newValue / 2
     }
   }
 
@@ -346,7 +346,7 @@ class Circle: Shape {
   }
 
   override func area() -> Double {
-    return Double.pi * radius * radius
+    return Double.pi * self.radius * self.radius
   }
 }
 
@@ -371,10 +371,9 @@ The example above demonstrates the following style guidelines:
 
 ### Use of Self
 
-For conciseness, avoid using `self` since Swift does not require it to access an object's properties or invoke its methods.
+For clarity, always use `self` to access an object's properties or invoke its methods.
 
-Use self only when required by the compiler (in `@escaping` closures, or in initializers to disambiguate properties from arguments). In other words, if it compiles without `self` then omit it.
-
+Using self makes it clear which variables are properties, and prevents accidental overrides of those properties. Mixed use of `self.` and non-`self.` is particularly to be avoided.
 
 ### Computed Properties
 
