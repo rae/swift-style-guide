@@ -250,7 +250,7 @@ Keep imports minimal. For example, don't import `UIKit` when importing `Foundati
 
 ## Spacing
 
-* Indent using 2 spaces rather than tabs to conserve space and help prevent line wrapping. Be sure to set this preference in Xcode and in the Project settings as shown below:
+* Indent using 1 tab rather than spaces. Be sure to set this preference in Xcode and in the Project settings as shown below:
 
 ![Xcode indent settings](screens/indentation.png)
 
